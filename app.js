@@ -36,7 +36,7 @@ const LEADERSHIP_BIOS = {
     bio: `
       <p class="mb-4">Ozhhiparakkal Babu is a distinguished financial technology expert, global entrepreneur, and the visionary leader of the DMI Group of Companies. Serving as the CEO and Managing Director of DMI Holdings, he has been instrumental in driving the organization's international growth across finance, technology, energy, and humanitarian sectors.</p>
       <p class="mb-4">A pioneering figure in financial technology, Babu Ozhhiparakkal has led a global FTSE company as its founder and majority shareholder (77%), demonstrating exceptional capability in building, scaling, and managing high-impact international enterprises.</p>
-      <p class="mb-4">In addition to his leadership at DMI Holdings, he also serves as the CEO and Managing Director of DMI–Gulf Petroleum UK, where he oversees major international energy and trading operations. He is also a registered Director with six other companies.</p>
+      <p class="mb-4">In addition to his leadership at DMI Holdings, he also serves as the CEO and Managing Director of DMI—Gulf Petroleum UK, where he oversees major international energy and trading operations. He is also a registered Director with six other companies.</p>
     `
   },
   ben: {
@@ -45,7 +45,7 @@ const LEADERSHIP_BIOS = {
     bio: `
       <p class="mb-4">Mr. Ben John serves as a distinguished Director at DMI Trading Corporation Limited (DMI Credit & Investment GMBH / DMI Investment Limited), bringing with him a strong legacy of global commitment, strategic vision, and humanitarian values.</p>
       <p class="mb-4">Beyond the corporate realm, Mr. Ben John is widely recognized for his impactful humanitarian work. He has played a vital role in global relief operations, poverty alleviation programs, community development projects, and initiatives supporting vulnerable populations.</p>
-      <p class="mb-4">Through his leadership at DMI Trading Corporation, Mr. Ben John continues to bridge business excellence with social responsibility—advancing global growth while ensuring meaningful humanitarian impact.</p>
+      <p class="mb-4">Through his leadership at DMI Trading Corporation, Mr. Ben John continues to bridge business excellence with social responsibility—advancing global growth while ensuring meaningful humanitarian impact. <a href="https://www.linkedin.com/in/dmigroups" target="_blank" rel="noopener noreferrer" style="color: #059669; text-decoration: underline;">Connect on LinkedIn</a></p>
     `
   },
   xavier: {
@@ -58,6 +58,61 @@ const LEADERSHIP_BIOS = {
     `
   }
 };
+
+// Leadership Principles Content
+const LEADERSHIP_PRINCIPLES = [
+  {
+    icon: 'target',
+    title: 'Vision with Purpose',
+    description: 'We think beyond traditional solutions and set bold goals to address global challenges such as energy scarcity, pollution, climate change, hunger, and poverty.'
+  },
+  {
+    icon: 'cpu',
+    title: 'Technology with Responsibility',
+    description: 'Our leaders ensure that every technology we implement is affordable, scalable, replicable, and ecologically safe.'
+  },
+  {
+    icon: 'users',
+    title: 'Partnership with Communities',
+    description: 'We work with people, not on people. Whether it is farmers, city planners, local governments, or industry players, collaboration is central to our leadership.'
+  },
+  {
+    icon: 'shield-check',
+    title: 'Execution with Integrity',
+    description: 'Our leadership is committed to transparent operations, ethical project execution, and a people-centered work culture.'
+  }
+];
+
+// Leadership Impact Metrics
+const LEADERSHIP_IMPACT = [
+  'Deployment of patented hydro magnetic energy solutions',
+  'Integrated farming systems supporting farmers and rural economies',
+  'Large-scale waste transformation technologies',
+  'Drinkable water and sanitation improvement programs',
+  'Sustainable hospitality and eco-tourism facilities',
+  'International collaborations with government and institutional bodies'
+];
+
+// Shared Value Metrics
+const SHARED_VALUE = [
+  'Cleaner rivers',
+  'Healthier soil',
+  'Empowered farmers',
+  'Reduced carbon footprint',
+  'Job creation',
+  'Improved public health',
+  'Enhanced community wellbeing'
+];
+
+// Collaboration Partners
+const COLLABORATION_PARTNERS = [
+  'Governments',
+  'Municipal authorities',
+  'Research institutions',
+  'Industry partners',
+  'Farmer cooperatives',
+  'Local community organizations'
+];
 
 // State
 let state = {
@@ -194,10 +249,10 @@ function init() {
       </nav>
 
       <!-- Main Content -->
-      <main class="scroll-snap-container">
+      <main>
         
         <!-- Hero Section -->
-        <section id="home" class="full-screen-section">
+        <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.8)), url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
           <div class="hero-content animate-fade-up">
             <span class="hero-badge">
               Environmental Consulting • Sustainability Solutions
@@ -220,7 +275,7 @@ function init() {
         </section>
 
         <!-- About Section -->
-        <section id="about" class="full-screen-section">
+        <section id="about" style="background-color: white; padding: 5rem 1.5rem;">
           <div class="about-container">
             <div class="about-grid">
               
@@ -231,6 +286,9 @@ function init() {
                   <h2 class="section-title">Navigating the Challenges of Sustainability</h2>
                   <p class="about-description">
                     Tropical Environmental Consultants Limited is a UK-based environmental consulting firm dedicated to helping organisations navigate the challenges of sustainability, environmental compliance, and responsible land and resource management. Formerly operating as Chrysalis Care North West Limited, the company rebranded to reflect its expanded focus on environmental services and sustainable development solutions.
+                  </p>
+                  <p class="about-description" style="margin-top: 1.5rem;">
+                    Tropical Environmental Consultants Limited (TECL) is a multinational environmental solution provider specializing in sustainable technologies, renewable energy, waste management, integrated farming, and circular economy-based industrial systems. TECL's mission is to deliver innovative, scalable, and affordable solutions that improve quality of life, protect natural ecosystems, and support global climate goals.
                   </p>
                 </div>
                 
@@ -311,7 +369,7 @@ function init() {
         </section>
 
         <!-- Vision Section -->
-        <section id="vision" class="full-screen-section">
+        <section id="vision" style="background-color: #0f172a; color: white; padding: 5rem 1.5rem;">
           <div class="vision-container">
             <div class="vision-header animate-fade-up">
               <span class="section-label" style="color: #34d399;">Our Mandate</span>
@@ -343,33 +401,11 @@ function init() {
                 <p>Creating shared value and ethical economic growth.</p>
               </div>
             </div>
-
-            <div class="principles-box animate-fade-up delay-200">
-              <h3>Key Leadership Principles</h3>
-              <div class="principles-grid">
-                <div class="principle-item">
-                  <i data-lucide="check-circle"></i>
-                  <p><strong>Vision with Purpose:</strong> Setting bold goals to address global challenges like energy scarcity and climate change.</p>
-                </div>
-                <div class="principle-item">
-                  <i data-lucide="check-circle"></i>
-                  <p><strong>Technology with Responsibility:</strong> Implementing affordable, scalable, and ecologically safe technologies.</p>
-                </div>
-                <div class="principle-item">
-                  <i data-lucide="check-circle"></i>
-                  <p><strong>Partnership with Communities:</strong> Working with people, not on people. Collaboration is central.</p>
-                </div>
-                <div class="principle-item">
-                  <i data-lucide="check-circle"></i>
-                  <p><strong>Execution with Integrity:</strong> Committed to transparency, ethical execution, and a people-centered culture.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
         <!-- Sectors Section -->
-        <section id="sectors" class="full-screen-section">
+        <section id="sectors" style="background-color: #f8fafc; padding: 5rem 1.5rem;">
           <div class="sectors-container">
             <div class="sectors-header animate-fade-up">
               <span class="section-label" style="color: #2563eb;">Our Expertise</span>
@@ -378,13 +414,13 @@ function init() {
 
             <div class="sectors-grid">
               <div class="sector-card" style="border-color: #10b981;">
-                <i data-lucide="wind" style="color: #059669;"></i>
+                <i data-lucide="zap" style="color: #059669;"></i>
                 <h3>Renewable Energy</h3>
                 <ul>
-                  <li>Hydro Magnetic Energy Systems (Patented)</li>
-                  <li>Solar, Wind, Hydrogen & Hybrid Smart-Grids</li>
+                  <li>Hydro Magnetic Energy Systems (Patented Technology)</li>
+                  <li>Solar, Wind, Hydrogen & Hybrid Smart-Grid Models</li>
                   <li>Waste-to-Energy & Biogas Systems</li>
-                  <li>Micro-grid & Off-grid Rural Solutions</li>
+                  <li>Micro-grid & Off-grid Rural Electrification Solutions</li>
                 </ul>
               </div>
               
@@ -394,8 +430,8 @@ function init() {
                 <ul>
                   <li>Solid & Liquid Waste Treatment</li>
                   <li>Municipal and Industrial Waste Solutions</li>
-                  <li>Plastic-to-Fuel & Resource Recovery</li>
-                  <li>Landfill-free Circular Models</li>
+                  <li>Plastic-to-Fuel, Plastics Recycling & Resource Recovery</li>
+                  <li>Landfill-free Circular Waste Processing Models</li>
                 </ul>
               </div>
               
@@ -403,7 +439,7 @@ function init() {
                 <i data-lucide="droplet" style="color: #0891b2;"></i>
                 <h3>Water & Sanitation</h3>
                 <ul>
-                  <li>Pure Drinking Water Disinfection</li>
+                  <li>Pure Drinking Water Disinfection & Filtration</li>
                   <li>Industrial and Sewage Treatment</li>
                   <li>Hydro-geological Resource Management</li>
                 </ul>
@@ -411,48 +447,50 @@ function init() {
               
               <div class="sector-card" style="border-color: #84cc16;">
                 <i data-lucide="sprout" style="color: #65a30d;"></i>
-                <h3>Agriculture</h3>
+                <h3>Agriculture & Integrated Farming</h3>
                 <ul>
                   <li>High-yield natural farming strategies</li>
                   <li>Organic manure production</li>
                   <li>Farmer support & buy-back systems</li>
-                  <li>Country-of-origin branding</li>
+                  <li>Country-of-origin branding for Indian agricultural products</li>
                 </ul>
               </div>
               
               <div class="sector-card" style="border-color: #f43f5e;">
                 <i data-lucide="heart-pulse" style="color: #e11d48;"></i>
-                <h3>Healthy Living</h3>
+                <h3>Healthy Living & Wellness</h3>
                 <ul>
                   <li>Community-level wellness programs</li>
-                  <li>Preventive health initiatives</li>
-                  <li>Ayurvedic wellness assessments</li>
-                  <li>Lifestyle interventions</li>
+                  <li>Preventive health and nutrition initiatives</li>
+                  <li>Ayurvedic wellness assessments & lifestyle interventions</li>
                 </ul>
               </div>
               
               <div class="sector-card" style="border-color: #6366f1;">
                 <i data-lucide="building-2" style="color: #4f46e5;"></i>
-                <h3>Infrastructure</h3>
+                <h3>Infrastructure & Hospitality</h3>
                 <ul>
                   <li>Eco-tourism Projects</li>
                   <li>Green campus development</li>
-                  <li>Sustainable hotels & resorts</li>
-                  <li>Smart-facility planning</li>
+                  <li>Sustainable hotels, resorts & smart-facility planning</li>
                 </ul>
               </div>
             </div>
           </div>
-        </section>
+        </section>`;
 
+        root.innerHTML += `
         <!-- Leadership Section -->
-        <section id="leadership" class="full-screen-section">
+        <section id="leadership" style="background-color: white; padding: 5rem 1.5rem;">
           <div class="leadership-container">
             <div class="leadership-header animate-fade-up">
               <span class="section-label">Our Team</span>
               <h2 class="section-title">Visionary Leadership</h2>
               <p>
-                Our leaders measure success not in shareholder value alone — but in <strong>shared value</strong>. We generate purpose and positive impact.
+                The leadership of Tropical Environmental Consultants Limited (TECL) is guided by a visionary team of innovators, technologists, environmental scientists, social entrepreneurs, and strategic planners. Our leaders bring together decades of multidisciplinary experience in renewable energy, environmental engineering, waste management, agriculture, and sustainable infrastructure development.
+              </p>
+              <p style="margin-top: 1rem;">
+                At the core of our leadership philosophy is the belief that businesses must not merely generate profit — they must <strong>generate purpose and positive impact</strong>. We focus on people, planet, and prosperity as interconnected responsibilities.
               </p>
             </div>
 
@@ -493,11 +531,108 @@ function init() {
                 <p style="color: #2563eb;">Director COO</p>
               </button>
             </div>
+            
+            <!-- Leadership Principles Box -->
+            <div class="leadership-principles-box animate-fade-up delay-200">
+              <h3>Key Leadership Principles</h3>
+              <div class="leadership-principles-grid">
+                ${LEADERSHIP_PRINCIPLES.map(principle => `
+                  <div class="leadership-principle-item">
+                    <h4>
+                      <i data-lucide="${principle.icon}"></i>
+                      ${principle.title}
+                    </h4>
+                    <p>${principle.description}</p>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Leadership Impact -->
+              <div class="leadership-impact-section">
+                <h4>Leadership Impact</h4>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">
+                  Under the current leadership direction, TECL has initiated and/or is supporting:
+                </p>
+                <div class="leadership-impact-list">
+                  ${LEADERSHIP_IMPACT.map(impact => `
+                    <div class="leadership-impact-item">
+                      <i data-lucide="check-circle"></i>
+                      <span>${impact}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Shared Value -->
+              <div class="shared-value-section">
+                <h4>Our leaders measure success in <em>shared value</em>:</h4>
+                <div class="shared-value-tags">
+                  ${SHARED_VALUE.map(value => `
+                    <span class="shared-value-tag">${value}</span>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Collaboration -->
+              <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                <h4 style="font-size: 1.125rem; font-weight: bold; color: #cbcbcbff; margin-bottom: 1rem;">
+                  Collaboration & Partnerships
+                </h4>
+                <p style="color: #78808cff; font-size: 0.875rem; margin-bottom: 1rem;">
+                  TECL collaborates with:
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                  ${COLLABORATION_PARTNERS.map(partner => `
+                    <span style="padding: 0.5rem 1rem; background: #f8fafc; color: #0f172a; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 600; border: 1px solid #e2e8f0;">
+                      ${partner}
+                    </span>
+                  `).join('')}
+                </div>
+                <p style="color: #64748b; font-size: 0.875rem; margin-top: 1rem; font-style: italic;">
+                  Projects are designed for impact, replicability, and long-term sustainability rather than short-term commercial gains.
+                </p>
+              </div>
+
+              <!-- People-Centered Culture -->
+              <div style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #e2e8f0;">
+                <h4 style="font-size: 1.125rem; font-weight: bold; color: #0f172a; margin-bottom: 1rem;">
+                  People-Centered Organizational Culture
+                </h4>
+                <p style="color: #475569; font-size: 0.875rem; margin-bottom: 1rem;">
+                  TECL leadership empowers every employee and stakeholder to become a contributor to environmental transformation. We encourage:
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="lightbulb" style="color: #10b981; width: 1rem; height: 1rem;"></i>
+                    <span style="font-size: 0.875rem; color: #475569;">Innovation</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="flask-conical" style="color: #10b981; width: 1rem; height: 1rem;"></i>
+                    <span style="font-size: 0.875rem; color: #475569;">Research-driven thinking</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="graduation-cap" style="color: #10b981; width: 1rem; height: 1rem;"></i>
+                    <span style="font-size: 0.875rem; color: #475569;">Continuous learning</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="wrench" style="color: #10b981; width: 1rem; height: 1rem;"></i>
+                    <span style="font-size: 0.875rem; color: #475569;">Creative engineering</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="briefcase" style="color: #10b981; width: 1rem; height: 1rem;"></i>
+                    <span style="font-size: 0.875rem; color: #475569;">Socially responsible entrepreneurship</span>
+                  </div>
+                </div>
+                <p style="color: #059669; font-size: 0.875rem; font-weight: 600; font-style: italic;">
+                  We believe that leadership is not a title — it is a responsibility.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="full-screen-section">
+        <section id="contact" style="background-color: #0f172a; color: white; padding: 5rem 1.5rem;">
           <div class="contact-container animate-fade-up">
             <h2>Let's Partner for a Resilient Future</h2>
             <p>
@@ -525,6 +660,16 @@ function init() {
                 <span class="location-tag">
                   <i data-lucide="globe"></i> Middle East & Africa
                 </span>
+              </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid #334155;">
+              <p style="font-size: 0.875rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #94a3b8; margin-bottom: 1rem;">Company Information</p>
+              <div style="font-size: 1rem; line-height: 1.75; color: #cbd5e1;">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">TROPICAL ENVIRONMENTAL CONSULTANTS LIMITED</p>
+                <p style="margin-bottom: 0.5rem;">Seneca House Links Point, Amy Johnson Way</p>
+                <p style="margin-bottom: 1.5rem;">Blackpool, England, FY4 2FF</p>
+                <p style="color: #94a3b8; font-size: 0.875rem;">Company number 12355526</p>
               </div>
             </div>
           </div>
