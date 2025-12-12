@@ -261,7 +261,7 @@ function init() {
               Tropical Environmental <br /> Consultants Limited
             </h1>
             <p class="hero-subtitle">
-              Innovative, scalable, and affordable solutions that improve quality of life, protect natural ecosystems, and support global climate goals.
+              Innovative and scalable solutions that improve quality of life, protect natural ecosystems, and support global climate goals.
             </p>
             <div class="hero-buttons">
               <button class="btn-primary" onclick="scrollToSection('about')">
