@@ -707,9 +707,11 @@ nav {
 }
 
 .leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center; /* center rows when fewer items per row */
+  align-items: stretch;
 }
 
 .leader-card {
@@ -725,8 +727,11 @@ nav {
   align-items: center;
   justify-content: flex-start;
   /* ensure cards are symmetric boxes */
-  align-self: stretch;
   min-height: 260px;
+  box-sizing: border-box;
+  /* control card width so rows can be centered */
+  flex: 0 1 260px; /* don't grow beyond 260px, shrink if needed */
+  max-width: 320px;
 }
 
 .leader-card:hover {
@@ -975,6 +980,16 @@ footer {
   font-size: 1.125rem;
   color: #475569;
   line-height: 1.75;
+}
+
+/* Justify modal content text for better readability */
+.modal-body,
+.modal-body p,
+.modal-body ul,
+.modal-body li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .modal-body p {
