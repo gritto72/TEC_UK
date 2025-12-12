@@ -503,7 +503,7 @@ function init() {
             <p>
               Connect with our team to discuss your project and start creating shared value in our operational regions.
             </p>
-            <a href="mailto:contact@teclconsultants.com" class="contact-btn">
+            <a href="mailto:tropicalenergyconsultants@gmail.com" class="contact-btn">
               <i data-lucide="mail"></i> Contact Us Today
             </a>
 
