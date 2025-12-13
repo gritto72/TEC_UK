@@ -52,34 +52,42 @@ const LEADERSHIP_BIOS = {
     name: 'Xavier Allessu',
     title: 'Director COO (Chief Operating Officer)',
     bio: `
-      <p class="mb-4">Environmental Consultant & Visionary Leader behind the emerging green renaissance, serves as the CEO of Tropical Environmental Consultants Pvt Ltd. TECPL is not just a company — it is engineering the future.</p>
+      <p class="mb-4">Environmental Consultant & Visionary Leader behind the emerging green renaissance, serves as the CEO of Tropical Environmental Consultants Pvt Ltd. TECPL is not just a company – it is engineering the future.</p>
       <p class="mb-4">Under his leadership, the organization pioneers wellness and preventive health initiatives, advances waste-to-energy innovation, develops natural organic manure solutions, and drives programs aimed at poverty eradication and community upliftment.</p>
-      <p class="mb-4">Xavier blends strategic business leadership with grassroots empowerment and a truly global perspective. His passion is to elevate quality of life — from farmers to families — with solutions built on technology, transparency, and unwavering commitment.</p>
+      <p class="mb-4">Xavier blends strategic business leadership with grassroots empowerment and a truly global perspective. His passion is to elevate quality of life – from farmers to families – with solutions built on technology, transparency, and unwavering commitment.</p>
     `
   }
 };
 
-// Leadership Principles Content
+// Leadership Principles Content - UPDATED with more modern structure
 const LEADERSHIP_PRINCIPLES = [
   {
     icon: 'target',
     title: 'Vision with Purpose',
-    description: 'We think beyond traditional solutions and set bold goals to address global challenges such as energy scarcity, pollution, climate change, hunger, and poverty.'
+    description: 'We think beyond traditional solutions and set bold goals to address global challenges such as energy scarcity, pollution, climate change, hunger, and poverty.',
+    color: '#3b82f6',
+    size: 'large'
   },
   {
     icon: 'cpu',
     title: 'Technology with Responsibility',
-    description: 'Our leaders ensure that every technology we implement is affordable, scalable, replicable, and ecologically safe.'
+    description: 'Our leaders ensure that every technology we implement is affordable, scalable, replicable, and ecologically safe.',
+    color: '#10b981',
+    size: 'medium'
   },
   {
     icon: 'users',
     title: 'Partnership with Communities',
-    description: 'We work with people, not on people. Whether it is farmers, city planners, local governments, or industry players, collaboration is central to our leadership.'
+    description: 'We work with people, not on people. Whether it is farmers, city planners, local governments, or industry players, collaboration is central to our leadership.',
+    color: '#06b6d4',
+    size: 'medium'
   },
   {
     icon: 'shield-check',
     title: 'Execution with Integrity',
-    description: 'Our leadership is committed to transparent operations, ethical project execution, and a people-centered work culture.'
+    description: 'Our leadership is committed to transparent operations, ethical project execution, and a people-centered work culture.',
+    color: '#8b5cf6',
+    size: 'large'
   }
 ];
 
@@ -111,7 +119,12 @@ const COLLABORATION_PARTNERS = [
   'Research institutions',
   'Industry partners',
   'Farmer cooperatives',
-  'Local community organizations'
+  'Local community organizations',
+  'DMI Credits and Investments GmbH',
+  'DMI Holdings GmbH',
+  'DMI Gulf Petroleum UK Ltd',
+  'DMI Finance GmbH',
+  'DMI Trading Corporation'
 ];
 
 // State
@@ -208,7 +221,6 @@ function renderModal() {
     }
   });
 }
-
 // Initialize app
 function init() {
   const root = document.getElementById('root');
@@ -255,10 +267,10 @@ function init() {
         <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: url('img/bg.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
           <div class="hero-content animate-fade-up">
             <h1 class="hero-title">
-              Tropical Environmental <br /> Consultants Limited
+              Scalable innovations for a better life and a greener planet. <br /> 
             </h1>
             <p class="hero-subtitle">
-             Scalable innovations for a better life and a greener planet.
+             
             </p>
             <div class="hero-buttons">
               <button class="btn-primary" onclick="scrollToSection('about')">
@@ -298,7 +310,7 @@ function init() {
 
                 <div>
                   <h3 style="font-size: 1.25rem; font-weight: bold; color: #0f172a; margin-bottom: 0.5rem;">Why TECL</h3>
-                  <p style="color: #475569;">
+                  <p style="color: #475569; font-size: 1.0625rem; line-height: 1.7;">
                     We combine committed leadership, deep expertise, and a flexible, project-focused operating model to deliver solutions tailored to your needs. Grounded in transparency, integrity, and measurable impact, we ensure every partnership creates meaningful and sustainable results.
                   </p>
                 </div>
@@ -369,8 +381,8 @@ function init() {
         <section id="vision" style="background-color: #0f172a; color: white; padding: 5rem 1.5rem;">
           <div class="vision-container">
             <div class="vision-header animate-fade-up">
-              <span class="section-label" style="color: #34d399;">What We Stand For</span>
-              <h2 class="section-title" style="color: white;">Committed to global sustainability</h2>
+              <span class="section-label" style="color: #34a6d3ff;">What We Stand For</span>
+              <h2 class="section-title" style="color: white;">Committed To Global Sustainability</h2>
               <p>
                 Committed to global sustainability, we deliver innovative, science-driven environmental solutions that reduce waste, restore ecosystems, improve communities, and create long-term value for everyone.
               </p>
@@ -473,13 +485,13 @@ function init() {
               </div>
             </div>
           </div>
-        </section>`;
+        </section>
 
-        root.innerHTML += `
         <!-- Leadership Section -->
-        <section id="leadership" style="background-color: white; padding: 5rem 1.5rem;">
+        <section id="leadership" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 20%, #f8fafc 40%, #f0fdf4 60%, #dbeafe 80%, #ffffff 100%); padding: 5rem 1.5rem;">
           <div class="leadership-container">
             <div class="leadership-header animate-fade-up">
+              <span class="section-label" style="color: #3b82f6;">Meet Our Team</span>
               <h2 class="section-title">Our Visionary Leadership</h2>
               <p>
                 At Tropical Environmental Consultants Limited (TECL), our leadership is driven by a team of innovators, technologists, environmental scientists, social entrepreneurs, and strategic planners. Together, we bring decades of multidisciplinary experience across renewable energy, environmental engineering, waste management, agriculture, and sustainable infrastructure development.
@@ -527,31 +539,44 @@ function init() {
               </button>
             </div>
             
-            <!-- Leadership Principles Box -->
+            <!-- Leadership Principles Box - MODERN REDESIGN -->
             <div class="leadership-principles-box animate-fade-up delay-200">
-              <h3>Key Leadership Principles</h3>
-              <div class="leadership-principles-grid">
-                ${LEADERSHIP_PRINCIPLES.map(principle => `
-                  <div class="leadership-principle-item">
-                    <h4>
-                      <i data-lucide="${principle.icon}"></i>
-                      ${principle.title}
-                    </h4>
-                    <p>${principle.description}</p>
+              <div class="principles-header">
+                <h3>Key Leadership Principles</h3>
+                <p>Guided by innovation, integrity, and impact</p>
+              </div>
+              
+              <div class="leadership-principles-modern-grid">
+                ${LEADERSHIP_PRINCIPLES.map((principle, index) => `
+                  <div class="leadership-principle-modern ${principle.size}" style="--principle-color: ${principle.color};">
+                    <div class="principle-icon-wrapper">
+                      <div class="principle-icon-bg"></div>
+                      <i data-lucide="${principle.icon}" class="principle-icon"></i>
+                    </div>
+                    <div class="principle-content">
+                      <h4>${principle.title}</h4>
+                      <p>${principle.description}</p>
+                    </div>
+                    <div class="principle-number">${String(index + 1).padStart(2, '0')}</div>
                   </div>
                 `).join('')}
               </div>
 
               <!-- Leadership Impact -->
               <div class="leadership-impact-section">
-                <h4>Leadership Impact</h4>
-                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">
+                <div class="impact-header">
+                  <i data-lucide="trending-up" style="width: 2rem; height: 2rem; color: #10b981;"></i>
+                  <h4>Leadership Impact</h4>
+                </div>
+                <p style="color: #94a3b8; font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6;">
                   Under the current leadership direction, TECL has initiated and/or is supporting:
                 </p>
-                <div class="leadership-impact-list">
-                  ${LEADERSHIP_IMPACT.map(impact => `
-                    <div class="leadership-impact-item">
-                      <i data-lucide="check-circle"></i>
+                <div class="leadership-impact-modern-grid">
+                  ${LEADERSHIP_IMPACT.map((impact, idx) => `
+                    <div class="leadership-impact-modern-item" style="animation-delay: ${idx * 0.1}s;">
+                      <div class="impact-icon">
+                        <i data-lucide="check-circle"></i>
+                      </div>
                       <span>${impact}</span>
                     </div>
                   `).join('')}
@@ -560,67 +585,74 @@ function init() {
 
               <!-- Shared Value -->
               <div class="shared-value-section">
-                <h4>Our leaders measure success in <em>shared value</em>:</h4>
-                <div class="shared-value-tags">
-                  ${SHARED_VALUE.map(value => `
-                    <span class="shared-value-tag">${value}</span>
+                <h4>Our leaders measure success in <em style="color: #60a5fa;">shared value</em>:</h4>
+                <div class="shared-value-modern-tags">
+                  ${SHARED_VALUE.map((value, idx) => `
+                    <span class="shared-value-modern-tag" style="animation-delay: ${idx * 0.05}s;">
+                      <i data-lucide="sparkles" style="width: 0.875rem; height: 0.875rem;"></i>
+                      ${value}
+                    </span>
                   `).join('')}
                 </div>
               </div>
 
               <!-- Collaboration -->
-              <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
-                <h4 style="font-size: 1.125rem; font-weight: bold; color: #cbcbcbff; margin-bottom: 1rem;">
-                  Collaboration & Partnerships
-                </h4>
-                <p style="color: #78808cff; font-size: 0.875rem; margin-bottom: 1rem;">
+              <div class="collaboration-section">
+                <div class="collaboration-header">
+                  <i data-lucide="handshake" style="width: 1.5rem; height: 1.5rem; color: #3b82f6;"></i>
+                  <h4>Collaboration & Partnerships</h4>
+                </div>
+                <p style="color: #94a3b8; font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6;">
                   TECL collaborates with:
                 </p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                  ${COLLABORATION_PARTNERS.map(partner => `
-                    <span style="padding: 0.5rem 1rem; background: #f8fafc; color: #0f172a; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 600; border: 1px solid #e2e8f0;">
-                      ${partner}
-                    </span>
+                <div class="collaboration-partners-grid">
+                  ${COLLABORATION_PARTNERS.map((partner, idx) => `
+                    <div class="collaboration-partner-item" style="animation-delay: ${idx * 0.08}s;">
+                      <i data-lucide="building-2" style="width: 1rem; height: 1rem;"></i>
+                      <span>${partner}</span>
+                    </div>
                   `).join('')}
                 </div>
-                <p style="color: #64748b; font-size: 0.875rem; margin-top: 1rem; font-style: italic;">
+                <p style="color: #94a3b8; font-size: 1rem; margin-top: 1.5rem; font-style: italic; line-height: 1.6;">
                   Projects are designed for impact, replicability, and long-term sustainability rather than short-term commercial gains.
                 </p>
               </div>
 
               <!-- People-Centered Culture -->
-              <div style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #e2e8f0;">
-                <h4 style="font-size: 1.125rem; font-weight: bold; color: #0f172a; margin-bottom: 1rem;">
+              <div class="people-centered-section">
+                <h4>
+                  <i data-lucide="heart" style="width: 1.5rem; height: 1.5rem; color: #f43f5e;"></i>
                   People-Centered Organizational Culture
                 </h4>
-                <p style="color: #475569; font-size: 0.875rem; margin-bottom: 1rem;">
+                <p style="color: #cbd5e1; font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6;">
                   TECL leadership empowers every employee and stakeholder to become a contributor to environmental transformation. We encourage:
                 </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <i data-lucide="lightbulb" style="color: #10b981; width: 1rem; height: 1rem;"></i>
-                    <span style="font-size: 0.875rem; color: #475569;">Innovation</span>
+                <div class="culture-values-grid">
+                  <div class="culture-value-item">
+                    <i data-lucide="lightbulb"></i>
+                    <span>Innovation</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <i data-lucide="flask-conical" style="color: #10b981; width: 1rem; height: 1rem;"></i>
-                    <span style="font-size: 0.875rem; color: #475569;">Research-driven thinking</span>
+                  <div class="culture-value-item">
+                    <i data-lucide="flask-conical"></i>
+                    <span>Research-driven thinking</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <i data-lucide="graduation-cap" style="color: #10b981; width: 1rem; height: 1rem;"></i>
-                    <span style="font-size: 0.875rem; color: #475569;">Continuous learning</span>
+                  <div class="culture-value-item">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>Continuous learning</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <i data-lucide="wrench" style="color: #10b981; width: 1rem; height: 1rem;"></i>
-                    <span style="font-size: 0.875rem; color: #475569;">Creative engineering</span>
+                  <div class="culture-value-item">
+                    <i data-lucide="wrench"></i>
+                    <span>Creative engineering</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <i data-lucide="briefcase" style="color: #10b981; width: 1rem; height: 1rem;"></i>
-                    <span style="font-size: 0.875rem; color: #475569;">Socially responsible entrepreneurship</span>
+                  <div class="culture-value-item">
+                    <i data-lucide="briefcase"></i>
+                    <span>Socially responsible entrepreneurship</span>
                   </div>
                 </div>
-                <p style="color: #059669; font-size: 0.875rem; font-weight: 600; font-style: italic;">
-                  We believe that leadership is not a title — it is a responsibility.
-                </p>
+                <div class="culture-quote">
+                  <i data-lucide="quote" style="width: 1.5rem; height: 1.5rem; color: #3b82f6; opacity: 0.5;"></i>
+                  <p>We believe that leadership is not a title — it is a responsibility.</p>
+                </div>
               </div>
             </div>
           </div>
