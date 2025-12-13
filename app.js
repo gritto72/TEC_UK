@@ -252,16 +252,13 @@ function init() {
       <main>
         
         <!-- Hero Section -->
-        <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.8)), url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
+        <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: url('img/bg.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
           <div class="hero-content animate-fade-up">
-            <span class="hero-badge">
-              Environmental Consulting • Sustainability Solutions
-            </span>
             <h1 class="hero-title">
               Tropical Environmental <br /> Consultants Limited
             </h1>
             <p class="hero-subtitle">
-              Innovative and scalable solutions that improve quality of life, protect natural ecosystems, and support global climate goals.
+             Scalable innovations for a better life and a greener planet.
             </p>
             <div class="hero-buttons">
               <button class="btn-primary" onclick="scrollToSection('about')">
@@ -283,26 +280,26 @@ function init() {
               <div class="about-text animate-fade-up">
                 <div>
                   <span class="section-label">About Us</span>
-                  <h2 class="section-title">Navigating the Challenges of Sustainability</h2>
+                  <h2 class="section-title">Navigating sustainability with clarity and purpose</h2>
                   <p class="about-description">
-                    Tropical Environmental Consultants Limited is a UK-based environmental consulting firm dedicated to helping organisations navigate the challenges of sustainability, environmental compliance, and responsible land and resource management. Formerly operating as Chrysalis Care North West Limited, the company rebranded to reflect its expanded focus on environmental services and sustainable development solutions.
+                    At Tropical Environmental Consultants Limited (TECL), we are dedicated to helping organisations meet the challenges of sustainability, environmental compliance, and responsible land and resource management. We originally operated as Chrysalis Care North West Limited, and rebranded to reflect our expanded vision and commitment to environmental solutions and sustainable development.
                   </p>
                   <p class="about-description" style="margin-top: 1.5rem;">
-                    Tropical Environmental Consultants Limited (TECL) is a multinational environmental solution provider specializing in sustainable technologies, renewable energy, waste management, integrated farming, and circular economy-based industrial systems. TECL's mission is to deliver innovative, scalable, and affordable solutions that improve quality of life, protect natural ecosystems, and support global climate goals.
+                    Today, we operate as a multinational environmental solutions provider, offering expertise in sustainable technologies, renewable energy, waste management, integrated farming, and circular-economy-based industrial systems. Our mission is simple: to deliver innovative, scalable, and affordable solutions that improve quality of life, protect natural ecosystems, and support global climate goals.
                   </p>
                 </div>
                 
                 <div class="about-box">
                   <h3>Our Vision</h3>
                   <p>
-                    We believe in creating long-term, positive environmental value through informed decision-making and responsible resource management. Our aim is to guide organisations in adopting sustainable practices that benefit both operational goals and the wider ecosystem.
+                   We envision a world where every decision contributes to a healthier planet. By championing responsible resource management and mindful innovation, we empower organisations to embrace sustainable practices that strengthen their growth while nurturing the ecosystems we all depend on.
                   </p>
                 </div>
 
                 <div>
-                  <h3 style="font-size: 1.25rem; font-weight: bold; color: #0f172a; margin-bottom: 0.5rem;">Why Choose Us</h3>
+                  <h3 style="font-size: 1.25rem; font-weight: bold; color: #0f172a; margin-bottom: 0.5rem;">Why TECL</h3>
                   <p style="color: #475569;">
-                    With a committed leadership team and a flexible, project-focused operating model, TECL delivers personalised consulting support designed around client needs. We value transparency, integrity, and measurable results in every engagement.
+                    We combine committed leadership, deep expertise, and a flexible, project-focused operating model to deliver solutions tailored to your needs. Grounded in transparency, integrity, and measurable impact, we ensure every partnership creates meaningful and sustainable results.
                   </p>
                 </div>
               </div>
@@ -372,10 +369,10 @@ function init() {
         <section id="vision" style="background-color: #0f172a; color: white; padding: 5rem 1.5rem;">
           <div class="vision-container">
             <div class="vision-header animate-fade-up">
-              <span class="section-label" style="color: #34d399;">Our Mandate</span>
-              <h2 class="section-title" style="color: white;">Vision & Commitment</h2>
+              <span class="section-label" style="color: #34d399;">What We Stand For</span>
+              <h2 class="section-title" style="color: white;">Committed to global sustainability</h2>
               <p>
-                To align all core projects with UN Sustainable Development Goals (SDGs) and reduce hunger, homelessness, and poverty through systemic interventions.
+                Committed to global sustainability, we deliver innovative, science-driven environmental solutions that reduce waste, restore ecosystems, improve communities, and create long-term value for everyone.
               </p>
             </div>
 
@@ -407,9 +404,8 @@ function init() {
         <!-- Sectors Section -->
         <section id="sectors" style="background-color: #f8fafc; padding: 5rem 1.5rem;">
           <div class="sectors-container">
-            <div class="sectors-header animate-fade-up">
-              <span class="section-label" style="color: #2563eb;">Our Expertise</span>
-              <h2 class="section-title">Key Sectors & Capabilities</h2>
+            <div class="sectors-header animate-fade-up" style="text-align: center;">
+              <h2 class="section-title" style="margin: 0 auto; color: #0f172a;">Where Expertise Meets Impact</h2>
             </div>
 
             <div class="sectors-grid">
@@ -484,13 +480,12 @@ function init() {
         <section id="leadership" style="background-color: white; padding: 5rem 1.5rem;">
           <div class="leadership-container">
             <div class="leadership-header animate-fade-up">
-              <span class="section-label">Our Team</span>
-              <h2 class="section-title">Visionary Leadership</h2>
+              <h2 class="section-title">Our Visionary Leadership</h2>
               <p>
-                The leadership of Tropical Environmental Consultants Limited (TECL) is guided by a visionary team of innovators, technologists, environmental scientists, social entrepreneurs, and strategic planners. Our leaders bring together decades of multidisciplinary experience in renewable energy, environmental engineering, waste management, agriculture, and sustainable infrastructure development.
+                At Tropical Environmental Consultants Limited (TECL), our leadership is driven by a team of innovators, technologists, environmental scientists, social entrepreneurs, and strategic planners. Together, we bring decades of multidisciplinary experience across renewable energy, environmental engineering, waste management, agriculture, and sustainable infrastructure development.
               </p>
               <p style="margin-top: 1rem;">
-                At the core of our leadership philosophy is the belief that businesses must not merely generate profit — they must <strong>generate purpose and positive impact</strong>. We focus on people, planet, and prosperity as interconnected responsibilities.
+                We reject profit as our primary goal. Instead, we are dedicated to creating meaningful impact—prioritizing people, the planet, and prosperity in everything we do. For us, these responsibilities are inseparable, guiding every initiative toward a sustainable and equitable future.
               </p>
             </div>
 
@@ -639,24 +634,20 @@ function init() {
               Connect with our team to discuss your project and start creating shared value in our operational regions.
             </p>
             <a href="mailto:tropicalenergyconsultants@gmail.com" class="contact-btn">
-              <i data-lucide="mail"></i> Contact Us Today
+              <i data-lucide="mail"></i> Contact Us
             </a>
 
             <div class="global-presence">
               <p>Global Presence</p>
               <div class="location-tags">
-                <span class="location-tag">
-                  <i data-lucide="globe"></i> India
-                </span>
+               
                 <span class="location-tag">
                   <i data-lucide="globe"></i> United Kingdom
                 </span>
                 <span class="location-tag">
-                  <i data-lucide="globe"></i> Netherlands
+                  <i data-lucide="globe"></i> Asia-Pacific
                 </span>
-                <span class="location-tag">
-                  <i data-lucide="globe"></i> Germany
-                </span>
+             
                 <span class="location-tag">
                   <i data-lucide="globe"></i> Middle East & Africa
                 </span>
