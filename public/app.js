@@ -280,7 +280,7 @@ function init() {
               <div class="about-text animate-fade-up">
                 <div>
                   <span class="section-label">About Us</span>
-                  <h2 class="section-title">Navigating sustainability with clarity and purpose</h2>
+                  <h2 class="section-title">Navigating Sustainability With Clarity And Purpose</h2>
                   <p class="about-description">
                     At Tropical Environmental Consultants Limited (TECL), we are dedicated to helping organisations meet the challenges of sustainability, environmental compliance, and responsible land and resource management. We originally operated as Chrysalis Care North West Limited, and rebranded to reflect our expanded vision and commitment to environmental solutions and sustainable development.
                   </p>
