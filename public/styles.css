@@ -25,15 +25,13 @@ html {
   scroll-behavior: smooth;
 }
 
-.scroll-snap-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+main {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-/* Ensure scroll container doesn't create horizontal overflow */
-.scroll-snap-container,
-main,
 .nav-container {
   width: 100%;
   max-width: 100%;
@@ -41,21 +39,15 @@ main,
   overflow-x: hidden;
 }
 
-/* Prevent large images from causing horizontal overflow */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-.full-screen-section {
-  min-height: 100vh;
-  scroll-snap-align: start;
+section {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
 }
 
@@ -117,8 +109,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 40;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
+  background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   height: 80px;
   transition: all 0.3s;
@@ -264,17 +255,7 @@ nav {
   font-weight: bold;
 }
 
-/* Hero Section */
-#home {
-  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.8)), url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
-  text-align: center;
-  padding: 0 1.5rem;
-}
-
+/* Hero Section Styles */
 .hero-content {
   max-width: 1024px;
   margin: 0 auto;
@@ -356,11 +337,6 @@ nav {
 }
 
 /* About Section */
-#about {
-  background-color: white;
-  padding: 0 1.5rem;
-}
-
 .about-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -513,12 +489,6 @@ nav {
 }
 
 /* Vision Section */
-#vision {
-  background-color: #0f172a;
-  color: white;
-  padding: 0 1.5rem;
-}
-
 .vision-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -613,11 +583,6 @@ nav {
 }
 
 /* Sectors Section */
-#sectors {
-  background-color: #f8fafc;
-  padding: 0 1.5rem;
-}
-
 .sectors-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -677,11 +642,6 @@ nav {
 }
 
 /* Leadership Section */
-#leadership {
-  background-color: white;
-  padding: 0 1.5rem;
-}
-
 .leadership-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -710,8 +670,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center; /* center rows when fewer items per row */
+  justify-content: center;
   align-items: stretch;
+  margin-bottom: 3rem;
 }
 
 .leader-card {
@@ -726,11 +687,9 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* ensure cards are symmetric boxes */
   min-height: 260px;
   box-sizing: border-box;
-  /* control card width so rows can be centered */
-  flex: 0 1 260px; /* don't grow beyond 260px, shrink if needed */
+  flex: 0 1 260px;
   max-width: 320px;
 }
 
@@ -739,7 +698,6 @@ nav {
   transform: translateY(-4px);
 }
 
-/* Make inner content take available vertical space so titles align and roles sit at bottom */
 .leader-card > h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -774,6 +732,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center; /* <— ADD THIS */
   display: block;
 }
 
@@ -791,25 +750,171 @@ nav {
   margin-top: 0.5rem;
 }
 
-/* Responsive adjustments for leadership cards */
-@media (max-width: 480px) {
-  .leadership-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  .leader-card {
-    min-height: 200px;
-    padding: 1rem;
-  }
+/* Leadership Principles Box */
+.leadership-principles-box {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid #334155;
+  margin-top: 3rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.leadership-principles-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.leadership-principles-box h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.leadership-principles-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.leadership-principle-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-left: 4px solid #10b981;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.leadership-principle-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #10b981;
+}
+
+.leadership-principle-item h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leadership-principle-item h4 svg {
+  color: #34d399;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.leadership-principle-item p {
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.leadership-impact-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.leadership-impact-section h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.leadership-impact-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.leadership-impact-list {
+  display: grid;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.leadership-impact-item {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  color: #cbd5e1;
+}
+
+.leadership-impact-item svg {
+  color: #34d399;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.shared-value-section {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.shared-value-section h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.shared-value-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.shared-value-tag {
+  padding: 0.5rem 1rem;
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  transition: all 0.3s;
+}
+
+.shared-value-tag:hover {
+  background: rgba(16, 185, 129, 0.3);
+  border-color: #34d399;
+  transform: scale(1.05);
 }
 
 /* Contact Section */
-#contact {
-  background-color: #0f172a;
-  color: white;
-  padding: 0 1.5rem;
-}
-
 .contact-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -908,6 +1013,8 @@ nav {
 footer {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   text-align: center;
   padding: 1.5rem;
@@ -978,11 +1085,10 @@ footer {
 
 .modal-body {
   font-size: 1.125rem;
-  color: #475569;
+  color: #828fa1;
   line-height: 1.75;
 }
 
-/* Justify modal content text for better readability */
 .modal-body,
 .modal-body p,
 .modal-body ul,
@@ -996,7 +1102,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Modal avatar (photo) shown in modal header */
 .modal-avatar {
   width: 72px;
   height: 72px;
@@ -1050,6 +1155,14 @@ footer {
   .sectors-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .leadership-principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .leadership-impact-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1077,5 +1190,26 @@ footer {
   
   .hero-title {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-grid {
+    gap: 1rem;
+  }
+  
+  .leader-card {
+    min-height: 200px;
+    padding: 1rem;
+    flex: 0 1 calc(50% - 0.5rem);
+  }
+  
+  .leader-avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  
+  .leader-card h3 {
+    font-size: 0.875rem;
   }
 }
