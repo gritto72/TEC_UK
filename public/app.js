@@ -390,7 +390,7 @@ function init() {
               <div class="vision-card">
                 <i data-lucide="zap" style="color: #34d399;"></i>
                 <h3>Clean Energy</h3>
-                <p>Advancing renewable technologies and sustainable power grids.</p>
+                <p>Hydromagnetic power for renewable and sustainable power grids.</p>
               </div>
               <div class="vision-card">
                 <i data-lucide="recycle" style="color: #60a5fa;"></i>
