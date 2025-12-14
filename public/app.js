@@ -115,11 +115,6 @@ const SHARED_VALUE = [
 // Collaboration Partners
 const COLLABORATION_PARTNERS = [
   'Governments',
-  'Municipal authorities',
-  'Research institutions',
-  'Industry partners',
-  'Farmer cooperatives',
-  'Local community organizations',
   'DMI Credits and Investments GmbH',
   'DMI Holdings GmbH',
   'DMI Gulf Petroleum UK Ltd',
@@ -185,10 +180,10 @@ function hideModal() {
 // Render modal
 function renderModal() {
   if (!state.activeModal) return;
-  
+
   const leader = LEADERSHIP_BIOS[state.activeModal];
   if (!leader) return;
-  
+
   const modalHTML = `
     <div id="modal-overlay" class="modal-overlay animate-fade-up">
       <div class="modal-content">
@@ -210,10 +205,10 @@ function renderModal() {
       </div>
     </div>
   `;
-  
+
   document.body.insertAdjacentHTML('beforeend', modalHTML);
   lucide.createIcons();
-  
+
   // Close on overlay click
   document.getElementById('modal-overlay').addEventListener('click', (e) => {
     if (e.target.id === 'modal-overlay') {
@@ -224,7 +219,7 @@ function renderModal() {
 // Initialize app
 function init() {
   const root = document.getElementById('root');
-  
+
   root.innerHTML = `
     <div class="font-sans text-slate-900 bg-slate-50 relative">
       <!-- Navigation -->
@@ -267,19 +262,16 @@ function init() {
         <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: url('img/bg.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
           <div class="hero-content animate-fade-up">
             <h1 class="hero-title">
-               <br /> 
+               Powering a Brighter, Cleaner World<br /> 
             </h1>
             <p class="hero-subtitle">
-             Scalable innovations for a better life and a greener planet.
+             
             </p>
-            <div class="hero-buttons">
-              <button class="btn-primary" onclick="scrollToSection('about')">
-                Discover Who We Are
-              </button>
-              <button class="btn-secondary" onclick="scrollToSection('sectors')">
-                Our Expertise
-              </button>
-            </div>
+<div class="hero-buttons">
+  <button class="btn-secondary" onclick="scrollToSection('sectors')" style="padding: 0.75rem 1.5rem; font-size: 1rem;">
+    Our Expertise
+  </button>
+</div>
           </div>
         </section>
 
@@ -613,9 +605,9 @@ function init() {
                     </div>
                   `).join('')}
                 </div>
-                <p style="color: #94a3b8; font-size: 1rem; margin-top: 1.5rem; font-style: italic; line-height: 1.6;">
-                  Projects are designed for impact, replicability, and long-term sustainability rather than short-term commercial gains.
-                </p>
+<p style="color: #94a3b8; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">
+  <a href="https://www.linkedin.com/in/dmigroups" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-weight: 600;">Connect with DMI Group on LinkedIn</a>
+</p>
               </div>
 
               <!-- People-Centered Culture -->
@@ -693,6 +685,9 @@ function init() {
                 <p style="margin-bottom: 0.5rem;">Seneca House Links Point, Amy Johnson Way</p>
                 <p style="margin-bottom: 1.5rem;">Blackpool, England, FY4 2FF</p>
                 <p style="color: #94a3b8; font-size: 0.875rem;">Company number 12355526</p>
+                <p style="color: #cbd5e1; font-size: 1rem; margin-top: 1rem;">
+  <a href="mailto:info@tropicalenergies.com" style="color: #3b82f6; text-decoration: none;">info@tropicalenergies.com</a>
+</p>
               </div>
             </div>
           </div>
@@ -705,10 +700,10 @@ function init() {
       </main>
     </div>
   `;
-  
+
   // Initialize Lucide icons
   lucide.createIcons();
-  
+
   // Handle escape key for modal
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && state.activeModal) {
