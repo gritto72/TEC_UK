@@ -310,14 +310,14 @@ function init() {
                 
                 <div class="about-box">
                   <h3>Our Vision</h3>
-                  <p>
+                  <p style="text-align: justify;">
                    We envision a world where every decision contributes to a healthier planet. By championing responsible resource management and mindful innovation, we empower organisations to embrace sustainable practices that strengthen their growth while nurturing the ecosystems we all depend on.
                   </p>
                 </div>
 
                 <div>
                   <h3 style="font-size: 1.25rem; font-weight: bold; color: #0f172a; margin-bottom: 0.5rem;">Why TECL</h3>
-                  <p style="color: #475569; font-size: 1.0625rem; line-height: 1.7;">
+                  <p style="color: #475569; font-size: 1.0625rem; line-height: 1.7; text-align: justify;">
                     We combine committed leadership, deep expertise, and a flexible, project-focused operating model to deliver solutions tailored to your needs. Grounded in transparency, integrity, and measurable impact, we ensure every partnership creates meaningful and sustainable results.
                   </p>
                 </div>
