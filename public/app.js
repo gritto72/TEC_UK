@@ -259,8 +259,13 @@ function init() {
       <main>
         
         <!-- Hero Section -->
-        <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: url('img/bg.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
-          <div class="hero-content animate-fade-up">
+ 
+<section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; color: white; text-align: center; padding: 0 1.5rem;">
+  <video autoplay loop muted playsinline style="position: absolute; top: calc(50% + 3rem); left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -2; object-fit: contain; background: linear-gradient(135deg, #000000 0%, #1e3a8a 50%, #000000 100%);">
+    <source src="img/large.mp4" type="video/mp4">
+  </video>
+  <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(30,58,138,0.2) 50%, rgba(0,0,0,0.3) 100%); z-index: -1;"></div>
+  <div class="hero-content animate-fade-up">
             <h1 class="hero-title">
                Powering a Brighter, Cleaner World<br /> 
             </h1>
@@ -271,6 +276,7 @@ function init() {
   <button class="btn-secondary" onclick="scrollToSection('sectors')" style="padding: 0.75rem 1.5rem; font-size: 1rem;">
     Our Expertise
   </button>
+</div>
 </div>
           </div>
         </section>
@@ -577,7 +583,7 @@ function init() {
 
               <!-- Shared Value -->
               <div class="shared-value-section">
-                <h4>Our leaders measure success in <em style="color: #60a5fa;">shared value</em>:</h4>
+                <h4>Our leaders measure success in <em style="color: #60a5fa;">shared value</em></h4>
                 <div class="shared-value-modern-tags">
                   ${SHARED_VALUE.map((value, idx) => `
                     <span class="shared-value-modern-tag" style="animation-delay: ${idx * 0.05}s;">
