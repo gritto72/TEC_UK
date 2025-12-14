@@ -1,5 +1,27 @@
 // Leadership Bios Data
 const LEADERSHIP_BIOS = {
+
+    ben: {
+    name: 'Ben John Manjaly',
+    title: 'President',
+    bio: `
+      <p class="mb-4">Mr. Ben John serves as a distinguished Director at DMI Trading Corporation Limited (DMI Credit & Investment GMBH / DMI Investment Limited), bringing with him a strong legacy of global commitment, strategic vision, and humanitarian values.</p>
+      <p class="mb-4">Beyond the corporate realm, Mr. Ben John is widely recognized for his impactful humanitarian work. He has played a vital role in global relief operations, poverty alleviation programs, community development projects, and initiatives supporting vulnerable populations.</p>
+      <p class="mb-4">Through his leadership at DMI Trading Corporation, Mr. Ben John continues to bridge business excellence with social responsibility—advancing global growth while ensuring meaningful humanitarian impact. <a href="https://www.linkedin.com/in/dmigroups" target="_blank" rel="noopener noreferrer" style="color: #059669; text-decoration: underline;">Connect on LinkedIn</a></p>
+    `
+  },
+
+
+    babu: {
+    name: 'Babu Ozhhiparakkal',
+    title: 'CEO/MD, DMI Holdings',
+    bio: `
+      <p class="mb-4">Ozhhiparakkal Babu is a distinguished financial technology expert, global entrepreneur, and the visionary leader of the DMI Group of Companies. Serving as the CEO and Managing Director of DMI Holdings, he has been instrumental in driving the organization's international growth across finance, technology, energy, and humanitarian sectors.</p>
+      <p class="mb-4">A pioneering figure in financial technology, Babu Ozhhiparakkal has led a global FTSE company as its founder and majority shareholder (77%), demonstrating exceptional capability in building, scaling, and managing high-impact international enterprises.</p>
+      <p class="mb-4">In addition to his leadership at DMI Holdings, he also serves as the CEO and Managing Director of DMI—Gulf Petroleum UK, where he oversees major international energy and trading operations. He is also a registered Director with six other companies.</p>
+    `
+  },
+
   steven: {
     name: 'Steven Joseph Kane',
     title: 'Executive Director',
@@ -11,6 +33,17 @@ const LEADERSHIP_BIOS = {
       </ul>
     `
   },
+
+    xavier: {
+    name: 'Xavier Allessu',
+    title: 'Director COO (Chief Operating Officer)',
+    bio: `
+      <p class="mb-4">Environmental Consultant & Visionary Leader behind the emerging green renaissance, serves as the CEO of Tropical Environmental Consultants Pvt Ltd. TECPL is not just a company – it is engineering the future.</p>
+      <p class="mb-4">Under his leadership, the organization pioneers wellness and preventive health initiatives, advances waste-to-energy innovation, develops natural organic manure solutions, and drives programs aimed at poverty eradication and community upliftment.</p>
+      <p class="mb-4">Xavier blends strategic business leadership with grassroots empowerment and a truly global perspective. His passion is to elevate quality of life – from farmers to families – with solutions built on technology, transparency, and unwavering commitment.</p>
+    `
+  },
+
   philip: {
     name: 'Sir Philip Steven Cabana',
     title: 'Director',
@@ -29,34 +62,10 @@ const LEADERSHIP_BIOS = {
       <p class="mb-4">He managed professional offices in Dar es Salaam and Nairobi, working with institutions like the World Bank, The United Nations, USAID, and ADB between 1975 and 1983. He later established the northern office of Baker Wilkins & Smith, providing cost consultancy and project management services in the construction and oil and gas industries both in the United Kingdom and overseas, particularly in Saudi Arabia and the UAE.</p>
       <p class="mb-4">In 2020, jointly with Steve Kane, David formed GBE International Limited, engaged as a global trading entity for the sale and purchase of fuel products and worldwide international real estate acquisitions.</p>
     `
-  },
-  babu: {
-    name: 'Babu Ozhhiparakkal',
-    title: 'CEO/MD, DMI Holdings',
-    bio: `
-      <p class="mb-4">Ozhhiparakkal Babu is a distinguished financial technology expert, global entrepreneur, and the visionary leader of the DMI Group of Companies. Serving as the CEO and Managing Director of DMI Holdings, he has been instrumental in driving the organization's international growth across finance, technology, energy, and humanitarian sectors.</p>
-      <p class="mb-4">A pioneering figure in financial technology, Babu Ozhhiparakkal has led a global FTSE company as its founder and majority shareholder (77%), demonstrating exceptional capability in building, scaling, and managing high-impact international enterprises.</p>
-      <p class="mb-4">In addition to his leadership at DMI Holdings, he also serves as the CEO and Managing Director of DMI—Gulf Petroleum UK, where he oversees major international energy and trading operations. He is also a registered Director with six other companies.</p>
-    `
-  },
-  ben: {
-    name: 'Ben John Manjaly',
-    title: 'President',
-    bio: `
-      <p class="mb-4">Mr. Ben John serves as a distinguished Director at DMI Trading Corporation Limited (DMI Credit & Investment GMBH / DMI Investment Limited), bringing with him a strong legacy of global commitment, strategic vision, and humanitarian values.</p>
-      <p class="mb-4">Beyond the corporate realm, Mr. Ben John is widely recognized for his impactful humanitarian work. He has played a vital role in global relief operations, poverty alleviation programs, community development projects, and initiatives supporting vulnerable populations.</p>
-      <p class="mb-4">Through his leadership at DMI Trading Corporation, Mr. Ben John continues to bridge business excellence with social responsibility—advancing global growth while ensuring meaningful humanitarian impact. <a href="https://www.linkedin.com/in/dmigroups" target="_blank" rel="noopener noreferrer" style="color: #059669; text-decoration: underline;">Connect on LinkedIn</a></p>
-    `
-  },
-  xavier: {
-    name: 'Xavier Allessu',
-    title: 'Director COO (Chief Operating Officer)',
-    bio: `
-      <p class="mb-4">Environmental Consultant & Visionary Leader behind the emerging green renaissance, serves as the CEO of Tropical Environmental Consultants Pvt Ltd. TECPL is not just a company – it is engineering the future.</p>
-      <p class="mb-4">Under his leadership, the organization pioneers wellness and preventive health initiatives, advances waste-to-energy innovation, develops natural organic manure solutions, and drives programs aimed at poverty eradication and community upliftment.</p>
-      <p class="mb-4">Xavier blends strategic business leadership with grassroots empowerment and a truly global perspective. His passion is to elevate quality of life – from farmers to families – with solutions built on technology, transparency, and unwavering commitment.</p>
-    `
   }
+
+
+
 };
 
 // Leadership Principles Content - UPDATED with more modern structure
@@ -499,43 +508,44 @@ function init() {
               </p>
             </div>
 
-            <div class="leadership-grid">
-              <button class="leader-card" onclick="showModal('steven')">
-                <div class="leader-avatar"><img src="img/steven.jpg" alt="Steven Joseph Kane"></div>
-                <h3>Steven Joseph Kane</h3>
-                <p style="color: #059669;">Executive Director</p>
-              </button>
-              
-              <button class="leader-card" onclick="showModal('philip')">
-                <div class="leader-avatar"><img src="img/philip.jpg" alt="Sir Philip Steven Cabana"></div>
-                <h3>Sir Philip S. Cabana</h3>
-                <p style="color: #2563eb;">Director</p>
-              </button>
-              
-              <button class="leader-card" onclick="showModal('david')">
-                <div class="leader-avatar"><img src="img/david.jpg" alt="David Bangham"></div>
-                <h3>David Bangham</h3>
-                <p style="color: #059669;">Director</p>
-              </button>
-              
-              <button class="leader-card" onclick="showModal('babu')">
-                <div class="leader-avatar"><img src="img/babu.jpg" alt="Babu Ozhhiparakkal"></div>
-                <h3>Babu Ozhhiparakkal</h3>
-                <p style="color: #2563eb;">CEO/MD</p>
-              </button>
-              
-              <button class="leader-card" onclick="showModal('ben')">
-                <div class="leader-avatar"><img src="img/ben.jpg" alt="Ben John Manjaly"></div>
-                <h3>Ben John Manjaly</h3>
-                <p style="color: #059669;">President</p>
-              </button>
-              
-              <button class="leader-card" onclick="showModal('xavier')">
-                <div class="leader-avatar"><img src="img/xavier.jpg" alt="Xavier Allessu"></div>
-                <h3>Xavier Allessu</h3>
-                <p style="color: #2563eb;">Director COO</p>
-              </button>
-            </div>
+            
+              <div class="leadership-grid">
+  <button class="leader-card" onclick="showModal('ben')">
+    <div class="leader-avatar"><img src="img/ben.jpg" alt="Ben John Manjaly"></div>
+    <h3>Ben John Manjaly</h3>
+    <p style="color: #2563eb;">President</p>
+  </button>
+  
+  <button class="leader-card" onclick="showModal('babu')">
+    <div class="leader-avatar"><img src="img/babu.jpg" alt="Babu Ozhhiparakkal"></div>
+    <h3>Babu Ozhhiparakkal</h3>
+    <p style="color: #2563eb;">CEO/MD</p>
+  </button>
+  
+  <button class="leader-card" onclick="showModal('steven')">
+    <div class="leader-avatar"><img src="img/steven.jpg" alt="Steven Joseph Kane"></div>
+    <h3>Steven Joseph Kane</h3>
+    <p style="color: #2563eb;">Executive Director</p>
+  </button>
+  
+  <button class="leader-card" onclick="showModal('xavier')">
+    <div class="leader-avatar"><img src="img/xavier.jpg" alt="Xavier Allessu"></div>
+    <h3>Xavier Allessu</h3>
+    <p style="color: #2563eb;">Director COO</p>
+  </button>
+  
+  <button class="leader-card" onclick="showModal('philip')">
+    <div class="leader-avatar"><img src="img/philip.jpg" alt="Sir Philip Steven Cabana"></div>
+    <h3>Sir Philip S. Cabana</h3>
+    <p style="color: #2563eb;">Director</p>
+  </button>
+  
+  <button class="leader-card" onclick="showModal('david')">
+    <div class="leader-avatar"><img src="img/david.jpg" alt="David Bangham"></div>
+    <h3>David Bangham</h3>
+    <p style="color: #2563eb;">Director</p>
+  </button>
+</div>
             
             <!-- Leadership Principles Box - MODERN REDESIGN -->
             <div class="leadership-principles-box animate-fade-up delay-200">
