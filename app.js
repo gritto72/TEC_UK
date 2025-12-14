@@ -115,11 +115,6 @@ const SHARED_VALUE = [
 // Collaboration Partners
 const COLLABORATION_PARTNERS = [
   'Governments',
-  'Municipal authorities',
-  'Research institutions',
-  'Industry partners',
-  'Farmer cooperatives',
-  'Local community organizations',
   'DMI Credits and Investments GmbH',
   'DMI Holdings GmbH',
   'DMI Gulf Petroleum UK Ltd',
@@ -610,9 +605,9 @@ function init() {
                     </div>
                   `).join('')}
                 </div>
-                <p style="color: #94a3b8; font-size: 1rem; margin-top: 1.5rem; font-style: italic; line-height: 1.6;">
-                  Projects are designed for impact, replicability, and long-term sustainability rather than short-term commercial gains.
-                </p>
+<p style="color: #94a3b8; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">
+  <a href="https://www.linkedin.com/in/dmigroups" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline; font-weight: 600;">Connect with DMI Group on LinkedIn</a>
+</p>
               </div>
 
               <!-- People-Centered Culture -->
@@ -690,6 +685,9 @@ function init() {
                 <p style="margin-bottom: 0.5rem;">Seneca House Links Point, Amy Johnson Way</p>
                 <p style="margin-bottom: 1.5rem;">Blackpool, England, FY4 2FF</p>
                 <p style="color: #94a3b8; font-size: 0.875rem;">Company number 12355526</p>
+                <p style="color: #cbd5e1; font-size: 1rem; margin-top: 1rem;">
+  <a href="mailto:info@tropicalenergies.com" style="color: #3b82f6; text-decoration: none;">info@tropicalenergies.com</a>
+</p>
               </div>
             </div>
           </div>

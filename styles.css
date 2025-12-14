@@ -253,8 +253,14 @@ nav {
 .hero-content {
   max-width: 1024px;
   margin: 0 auto;
+  padding-top: 8rem;
 }
 
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 4rem;
+  }
+}
 .hero-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -525,25 +531,9 @@ nav {
 
 .vision-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-bottom: 4rem;
-}
-
-.vision-card:nth-child(1) {
-  grid-column: span 2;
-}
-
-.vision-card:nth-child(2) {
-  grid-column: span 1;
-}
-
-.vision-card:nth-child(3) {
-  grid-column: span 1;
-}
-
-.vision-card:nth-child(4) {
-  grid-column: span 2;
 }
 
 @media (max-width: 768px) {
@@ -607,32 +597,8 @@ nav {
 
 .sectors-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-}
-
-.sector-card:nth-child(1) {
-  grid-column: span 3;
-}
-
-.sector-card:nth-child(2) {
-  grid-column: span 3;
-}
-
-.sector-card:nth-child(3) {
-  grid-column: span 2;
-}
-
-.sector-card:nth-child(4) {
-  grid-column: span 2;
-}
-
-.sector-card:nth-child(5) {
-  grid-column: span 2;
-}
-
-.sector-card:nth-child(6) {
-  grid-column: span 6;
 }
 
 @media (max-width: 1024px) {
@@ -1120,6 +1086,12 @@ nav {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .leadership-impact-modern-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .leadership-impact-modern-item {
   display: flex;
   align-items: start;
@@ -1209,7 +1181,7 @@ nav {
 .collaboration-section {
   margin-top: 3rem;
   padding: 2.5rem;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   border-radius: 1.5rem;
   position: relative;
   z-index: 1;
@@ -1230,9 +1202,15 @@ nav {
 
 .collaboration-partners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .collaboration-partners-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .collaboration-partner-item {
@@ -1268,7 +1246,7 @@ nav {
 .people-centered-section {
   margin-top: 3rem;
   padding: 2.5rem;
-  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   border-radius: 1.5rem;
   position: relative;
   z-index: 1;
@@ -1298,7 +1276,7 @@ nav {
   padding: 1rem 1.25rem;
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid #8b5cf6;
+  border: 1px solid #0ea5e9;
   font-weight: 500;
   color: #0f172a;
   font-size: 0.9375rem;
@@ -1306,10 +1284,10 @@ nav {
 }
 
 .culture-value-item:hover {
-  background: #8b5cf6;
+  background: #0ea5e9;
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 6px 12px rgba(14, 165, 233, 0.25);
 }
 
 .culture-value-item svg {
@@ -1325,11 +1303,11 @@ nav {
   padding: 1.5rem;
   background: white;
   border-radius: 0.75rem;
-  border-left: 4px solid #8b5cf6;
+  border-left: 4px solid #0ea5e9;
 }
 
 .culture-quote p {
-  color: #8b5cf6;
+  color: #0ea5e9;
   font-size: 1.125rem;
   font-weight: 600;
   font-style: italic;
