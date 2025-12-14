@@ -185,10 +185,10 @@ function hideModal() {
 // Render modal
 function renderModal() {
   if (!state.activeModal) return;
-  
+
   const leader = LEADERSHIP_BIOS[state.activeModal];
   if (!leader) return;
-  
+
   const modalHTML = `
     <div id="modal-overlay" class="modal-overlay animate-fade-up">
       <div class="modal-content">
@@ -210,10 +210,10 @@ function renderModal() {
       </div>
     </div>
   `;
-  
+
   document.body.insertAdjacentHTML('beforeend', modalHTML);
   lucide.createIcons();
-  
+
   // Close on overlay click
   document.getElementById('modal-overlay').addEventListener('click', (e) => {
     if (e.target.id === 'modal-overlay') {
@@ -224,7 +224,7 @@ function renderModal() {
 // Initialize app
 function init() {
   const root = document.getElementById('root');
-  
+
   root.innerHTML = `
     <div class="font-sans text-slate-900 bg-slate-50 relative">
       <!-- Navigation -->
@@ -267,19 +267,16 @@ function init() {
         <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-image: url('img/bg.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; text-align: center; padding: 0 1.5rem;">
           <div class="hero-content animate-fade-up">
             <h1 class="hero-title">
-              Scalable innovations for a better life and a greener planet. <br /> 
+               Powering a Brighter, Cleaner World<br /> 
             </h1>
             <p class="hero-subtitle">
              
             </p>
-            <div class="hero-buttons">
-              <button class="btn-primary" onclick="scrollToSection('about')">
-                Discover Who We Are
-              </button>
-              <button class="btn-secondary" onclick="scrollToSection('sectors')">
-                Our Expertise
-              </button>
-            </div>
+<div class="hero-buttons">
+  <button class="btn-secondary" onclick="scrollToSection('sectors')" style="padding: 0.75rem 1.5rem; font-size: 1rem;">
+    Our Expertise
+  </button>
+</div>
           </div>
         </section>
 
@@ -705,10 +702,10 @@ function init() {
       </main>
     </div>
   `;
-  
+
   // Initialize Lucide icons
   lucide.createIcons();
-  
+
   // Handle escape key for modal
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && state.activeModal) {
